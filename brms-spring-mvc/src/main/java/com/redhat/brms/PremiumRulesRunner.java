@@ -18,6 +18,7 @@ public class PremiumRulesRunner {
         	
         	Driver driver = new Driver();
         	driver.setAge(30);
+        	driver.setCity("Raleigh");
         	Quote quote = new Quote();
         	Vehicle vehicle = new Vehicle();
         	vehicle.setMake("BMW");
@@ -27,10 +28,15 @@ public class PremiumRulesRunner {
         	if (null != vehicle ){
         		ksession.insert(vehicle);
         	}
+        	if (null != quote ){
+        		ksession.insert(quote);
+        	}
+        	ksession.startProcess("InsurancePremiumRuleFlow");
         	ksession.fireAllRules();
         } catch (Throwable t) {
             t.printStackTrace();
         }
+        ksession.dispose();
     }
 	private static KieSession readKnowledgeBase() throws Exception {
 		
@@ -40,12 +46,4 @@ public class PremiumRulesRunner {
 		
 		return kSession;
 	}
-/*	private static KieSession readKnowledgeBase2() throws Exception {
-		
-        KieServices ks = KieServices.Factory.get();
-	    KieContainer kContainer = ks.getKieClasspathContainer();
-    	KieSession kSession = kContainer.newKieSession("ksession-rules");
-		
-		return kSession;
-	}*/
 }
