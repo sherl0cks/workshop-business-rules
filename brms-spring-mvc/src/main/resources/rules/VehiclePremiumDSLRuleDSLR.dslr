@@ -16,33 +16,3 @@ ruleflow-group "VehiclePremiumRule"
        Logically insert a class Premium with the amount field set to 500
 
 end
-
-rule "VehiclePremiumRule2"
-dialect "mvel"
-ruleflow-group "VehiclePremiumRule" 
-    when
-        Driver is between {lower} and {upper} years old
-    then
-        
-
-end
-
-rule "VehiclePremiumRule3"
-dialect "mvel"
-ruleflow-group "VehiclePremiumRule" 
-    when
-        Driver is greater than {age} years old
-    then
-       
-
-end
-
-rule "VehiclePremiumRule4"
-dialect "mvel"
-ruleflow-group "VehiclePremiumRule" 
-    when
-        Driver is less than {age} years old
-    then
-
-
-end
