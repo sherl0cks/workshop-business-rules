@@ -2,6 +2,7 @@ package com.redhat.brms.dsl
 
 import com.redhat.brms.Driver;
 import com.redhat.brms.Premium;
+import com.redhat.brms.Quote;
 
 expander VehiclePremiumDSLRule.dsl
 
