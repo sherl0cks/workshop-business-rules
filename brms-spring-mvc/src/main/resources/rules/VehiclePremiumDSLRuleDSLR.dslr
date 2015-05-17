@@ -10,7 +10,7 @@ expander VehiclePremiumDSLRule.dsl
 
 rule "VehiclePremiumRule1"
 dialect "mvel"
-ruleflow-group "VehiclePremiumRule" 
+ruleflow-group "VehiclePremiumRules" 
     when
         Driver is at least 19 years old and lives in "Raleigh"
     then
