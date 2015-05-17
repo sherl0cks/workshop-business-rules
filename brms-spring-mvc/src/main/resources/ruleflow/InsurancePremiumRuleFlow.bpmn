@@ -18,24 +18,24 @@
       <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
     </bpmn2:businessRuleTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_2" tns:priority="1" sourceRef="BusinessRuleTask_1" targetRef="BusinessRuleTask_2"/>
-    <bpmn2:businessRuleTask id="BusinessRuleTask_2" tns:ruleFlowGroup="VehiclePremiumRule" name="Vehicle Premium Rules">
+    <bpmn2:sequenceFlow id="SequenceFlow_2" tns:priority="1" name="" sourceRef="BusinessRuleTask_1" targetRef="BusinessRuleTask_2"/>
+    <bpmn2:businessRuleTask id="BusinessRuleTask_2" tns:ruleFlowGroup="VehiclePremiumRules" name="Vehicle Premium Rules">
       <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
     </bpmn2:businessRuleTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_3" tns:priority="1" sourceRef="BusinessRuleTask_2" targetRef="BusinessRuleTask_3"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_3" tns:priority="1" name="" sourceRef="BusinessRuleTask_2" targetRef="BusinessRuleTask_3"/>
     <bpmn2:businessRuleTask id="BusinessRuleTask_3" tns:ruleFlowGroup="PremiumCalculationRules" name="PremiumCalculationRules">
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
     </bpmn2:businessRuleTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_4" tns:priority="1" sourceRef="BusinessRuleTask_3" targetRef="EndEvent_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_4" tns:priority="1" name="" sourceRef="BusinessRuleTask_3" targetRef="EndEvent_1"/>
     <bpmn2:endEvent id="EndEvent_1" name="">
       <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:startEvent id="_1" g:x="16" g:y="16" g:width="48" g:height="48" name="StartProcess">
       <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
     </bpmn2:startEvent>
-    <bpmn2:sequenceFlow id="SequenceFlow_1" tns:priority="1" sourceRef="_1" targetRef="BusinessRuleTask_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" tns:priority="1" name="" sourceRef="_1" targetRef="BusinessRuleTask_1"/>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_Process_1" bpmnElement="InsurancePremiumRuleFlow">
